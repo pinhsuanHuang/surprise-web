@@ -17,6 +17,6 @@ noBtn.addEventListener('touchstart', (e) => {
 
 yesBtn.addEventListener('click', () => {
     // 這裡可以換成你的 Google Form 邏輯或單純 Alert
-    alert('就知道你是!!!');
+    alert('<3');
     window.location.href = "https://www.google.com"; 
 });
