@@ -2,26 +2,25 @@ const noBtn = document.querySelector('#noBtn');
 const yesBtn = document.querySelector('#yesBtn');
 
 function moveButton() {
-    // 取得視窗寬高
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
-    
-    // 取得按鈕本身的寬高
-    const btnWidth = noBtn.offsetWidth;
-    const btnHeight = noBtn.offsetHeight;
 
-    // 計算安全範圍（扣除按鈕大小，並留 20px 邊距防止貼齊邊緣）
-    const maxX = windowWidth - btnWidth - 20;
-    const maxY = windowHeight - btnHeight - 20;
+    // 定義「中間附近」的範圍 (例如螢幕中間 50% 的區域)
+    const rangeWidth = windowWidth * 0.5;
+    const rangeHeight = windowHeight * 0.5;
 
-    // 確保隨機值至少為 10px，避免跳到左上角死角
-    const randomX = Math.max(10, Math.floor(Math.random() * maxX));
-    const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+    // 計算該區域的起始座標 (讓範圍居中)
+    const minX = (windowWidth - rangeWidth) / 2;
+    const minY = (windowHeight - rangeHeight) / 2;
+
+    // 在這個中間區域內隨機產生座標
+    const randomX = minX + Math.random() * (rangeWidth - noBtn.offsetWidth);
+    const randomY = minY + Math.random() * (rangeHeight - noBtn.offsetHeight);
 
     noBtn.style.position = 'fixed';
     noBtn.style.left = `${randomX}px`;
     noBtn.style.top = `${randomY}px`;
-    noBtn.style.margin = '0'; // 清除原本 CSS 可能有的 margin 影響
+    noBtn.style.margin = '0';
 }
 
 noBtn.addEventListener('mouseover', moveButton);
