@@ -37,7 +37,7 @@ yesBtn.addEventListener('click', () => {
     quizContainer.style.display = 'none';
     resultContainer.style.display = 'block'; 
     resultGif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDI5bm4yZ3B3eXcwZngwOTZ6YTg5cjMxZWswN3QxdHUzaGhpeWdoayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ofSBsGsk8TPcLaNws/giphy.gif"; 
-    resultText.innerHTML = 'I found a love for me.<br>Darling, just dive right in and follow my lead<br>Well, I found a girl, beautiful and sweet<br>Oh, I never knew you were the someone waiting for me';
+    resultText.innerHTML = 'I found a girl, beautiful and sweet<br>Oh, I never knew you were the someone waiting for me';
 
     setTimeout(() => {
         window.location.href = "https://pinhsuanhuang.github.io/surprise-web"; 
