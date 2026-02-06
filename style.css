@@ -1,19 +1,22 @@
 body {
-    background-color: #fce4ec;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
     margin: 0;
-    touch-action: manipulation;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .question-container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    position: relative;
     text-align: center;
     width: 90%;
+    max-width: 600px;
 }
+
 .local-gif {
     width: 100%;
     max-width: 250px;
@@ -41,6 +44,19 @@ body {
     color: white;
     z-index: 999;
 }
+
+#resultContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
 @media (max-width: 600px) {
     .question { font-size: 1.8rem; }
     .btn { padding: 12px 24px; font-size: 16px; }
