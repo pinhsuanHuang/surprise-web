@@ -57,7 +57,40 @@ body {
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
 
+#resultText {
+    white-space: pre-line;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+#resultGif {
+    width: 80%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 @media (max-width: 600px) {
-    .question { font-size: 1.8rem; }
     .btn { padding: 12px 24px; font-size: 16px; }
+    
+    .question {
+        font-size: 1.8rem;
+    }
+
+    #resultText {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-top: 0.5rem;
+    }
+
+    #resultGif {
+        max-width: 150px; 
+        max-height: 150px;
+    }
+
+    #resultContainer {
+        top: 45%; 
+    }
 }
